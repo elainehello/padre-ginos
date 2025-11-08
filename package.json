@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/elainehello/padre-ginos#readme",
   "devDependencies": {
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.5.0",
     "prettier": "^3.3.3"
   }
 }
