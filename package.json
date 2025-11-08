@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --write \"src/**/*.{js,jsx,tsx,ccs,html,json}\"",
+    "lint": "eslint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,9 +21,11 @@
   },
   "homepage": "https://github.com/elainehello/padre-ginos#readme",
   "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.0",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^16.5.0",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "vite": "^7.2.2"
   }
 }
