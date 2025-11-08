@@ -1,13 +1,15 @@
 const Pizza = (props) => {
+  // props are the way to pass data and configuration to a React component,
+  // allowing comps. to be more flexible and reusable
   return React.createElement(
     "div",
     {},
     [
       React.createElement("h1", {}, props.name),
       React.createElement("p", {}, props.description),
-    ] // if we want to return multiple react components instances we create an array '[]'
+    ], // if we want to return multiple react components instances we create an array '[]'
   );
-}; // Array of mulitple children
+};
 
 // Our first jsx / react component
 // component - class associated
@@ -16,9 +18,10 @@ const Pizza = (props) => {
 // App() reusable component
 const App = () => {
   return React.createElement(
-    "div",
+    "div", // parent element
     {}, // id, class , for.. '{}' means not attributes
     [
+      // Array of mulitple children
       React.createElement("h1", {}, "Padre Gino's"),
       React.createElement(Pizza, {
         name: "The Peperroni Pizza",
@@ -44,7 +47,7 @@ const App = () => {
         name: "The Mushroom Pizza",
         description: "Fresh and something else",
       }),
-    ]
+    ],
   );
 };
 
