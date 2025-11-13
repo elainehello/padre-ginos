@@ -14,27 +14,27 @@ const App = () => {
       <Pizza
         name="The Napolitana Pizza"
         description="Delicious roast tomato greek cheese"
-        image="/public/pizzas/pepperoni.webp"
+        image="/public/pizzas/napolitana.webp"
       />
       <Pizza
         name="The Pineapple greatest Pizza"
         description="Juicy and flavory experience"
-        image="/public/pizzas/pepperoni.webp"
+        image="/public/pizzas/hawaiian.webp"
       />
       <Pizza
         name="The Magic 4 cheese Pizza"
         description="Best cheeses from the world"
-        image="/public/pizzas/pepperoni.webp"
+        image="/public/pizzas/four_cheese.webp"
       />
       <Pizza
         name="The Vegetarian Pizza"
         description="Finest veggies"
-        image="/public/pizzas/pepperoni.webp"
+        image="/public/pizzas/ital_veggie.webp"
       />
       <Pizza
         name="The Mushroom Pizza"
         description="Fresh and something else"
-        image="/public/pizzas/pepperoni.webp"
+        image="/public/pizzas/veggie_veg.webp"
       />
     </div>
   );
