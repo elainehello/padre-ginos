@@ -1,12 +1,13 @@
 // react component
 
-const Pizza = (props) => { // Receives props from parent component App.jsx
+const Pizza = (props) => {
+  // Receives props from parent component App.jsx
   return (
-    <div
-    className="pizza">
-    onClick={() => {
-      console.log("hi");
-    }}
+    <div className="pizza">
+      onClick=
+      {() => {
+        console.log("hi");
+      }}
       <h1>{props.name}</h1>
       <p>{props.description}</p>
       <img src={props.image} alt={props.name} />
