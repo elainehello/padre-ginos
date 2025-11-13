@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div>
       <h1>Padre Gino's - Order Now</h1>
-      <Pizza
+      <Pizza // Passing props to Pizza component Pizza.jsx
         name="The Pepperoni Pizza"
         description="Some juicy pizza"
         image="/public/pizzas/pepperoni.webp"

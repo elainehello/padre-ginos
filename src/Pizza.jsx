@@ -1,6 +1,6 @@
 // react component
 
-const Pizza = (props) => {
+const Pizza = (props) => { // Receives props from parent component App.jsx
   return (
     <div className="pizza">
       <h1>{props.name}</h1>
