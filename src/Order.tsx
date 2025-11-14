@@ -1,10 +1,37 @@
 import { useState } from "react";
 import Pizza from "./Pizza";
 
+/**
+ * @typedef {Object} PizzaOrder
+ * @property {string} pizzaType - Type of pizza
+ * @property {string} pizzaSize - Size of pizza  
+ * @property {number} price - Price of pizza
+ */
+
+/**
+ * @typedef {Object} OrderProps
+ * @property {function} [onOrderSubmit] - Callback when order is submitted
+ */
+
+
+interface PizzaOrder { // TS interface
+  pizzaType: string;
+  pizzaSize: string;
+  price: number;
+}
+
+interface OrderProps {
+  onOrderSubmit?: (order: PizzaOrder) => void;
+}
+
+/**
+ * Order component
+ * @param {OrderProps} props - Component props
+ */
 // export default allows you to import this component without curly braces
-export default function Order() {
-  const [pizzaType, setPizzaType] = useState("pepperoni"); // ← Initial state
-  const [pizzaSize, setPizzaSize] = useState("M");
+export default function Order({ onOrderSubmit }: OrderProps) {
+  const [pizzaType, setPizzaType] = useState<string>("pepperoni"); // ← Initial state
+  const [pizzaSize, setPizzaSize] = useState<string>("M");
   console.log(pizzaType, pizzaSize);
 
   return (
