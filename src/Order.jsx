@@ -5,7 +5,7 @@ import Pizza from "./Pizza";
 export default function Order() {
   const [pizzaType, setPizzaType] = useState("pepperoni"); // ← Initial state
   const [pizzaSize, setPizzaSize] = useState("M");
-  console.log(pizzaType, pizzaType);
+  console.log(pizzaType, pizzaSize);
 
   return (
     <div className="order">
@@ -37,7 +37,7 @@ export default function Order() {
                   name="pizza-size"
                   value="S"
                   id="pizza-s"
-                  onClick={(e) => setPizzaSize(e.target.value)}
+                  onChange={(e) => setPizzaSize(e.target.value)}
                 />
                 <label htmlFor="pizza-s">Small</label>
               </span>
@@ -48,7 +48,7 @@ export default function Order() {
                   name="pizza-size"
                   value="M"
                   id="pizza-m"
-                  onClick={(e) => setPizzaSize(e.target.value)}
+                  onChange={(e) => setPizzaSize(e.target.value)}
                 />
                 <label htmlFor="pizza-m">Medium</label>
               </span>
@@ -59,7 +59,7 @@ export default function Order() {
                   name="pizza-L"
                   value="L"
                   id="pizza-l"
-                  onClick={(e) => setPizzaSize(e.target.value)}
+                  onChange={(e) => setPizzaSize(e.target.value)}
                 />
                 <label htmlFor="pizza-l">Large</label>
               </span>
