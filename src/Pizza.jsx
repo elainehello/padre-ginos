@@ -4,7 +4,6 @@ const Pizza = (props) => {
   // Receives props from parent component App.jsx
   return (
     <div className="pizza">
-      onClick=
       {() => {
         console.log("hi");
       }}

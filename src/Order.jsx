@@ -3,11 +3,9 @@ import Pizza from "./Pizza";
 
 // export default allows you to import this component without curly braces
 export default function Order() {
-  // const pizzaType = "pepperoni";
-  // const pizzaSize = "M";
-
-  const [pizzaType, setPizzaType] = useState("pepperoni");
+  const [pizzaType, setPizzaType] = useState("pepperoni"); // ← Initial state
   const [pizzaSize, setPizzaSize] = useState("M");
+  console.log(pizzaType, pizzaType);
 
   return (
     <div className="order">
@@ -17,9 +15,9 @@ export default function Order() {
           <div>
             <label htmlFor="pizza-type">Pizza Type</label>
             <select
-              onChange={(e) => setPizzaType(e.target.value)}
+              onChange={(e) => setPizzaType(e.target.value)} // ← Event handler
               name="pizza-type"
-              value={pizzaType}
+              value={pizzaType} // ← Display current state
             >
               <option value="pepperoni">The Pepperoni Pizza</option>
               <option value="napolitana">The Napolitana Pizza</option>
@@ -39,6 +37,7 @@ export default function Order() {
                   name="pizza-size"
                   value="S"
                   id="pizza-s"
+                  onClick={(e) => setPizzaSize(e.target.value)}
                 />
                 <label htmlFor="pizza-s">Small</label>
               </span>
@@ -49,6 +48,7 @@ export default function Order() {
                   name="pizza-size"
                   value="M"
                   id="pizza-m"
+                  onClick={(e) => setPizzaSize(e.target.value)}
                 />
                 <label htmlFor="pizza-m">Medium</label>
               </span>
@@ -59,6 +59,7 @@ export default function Order() {
                   name="pizza-L"
                   value="L"
                   id="pizza-l"
+                  onClick={(e) => setPizzaSize(e.target.value)}
                 />
                 <label htmlFor="pizza-l">Large</label>
               </span>
