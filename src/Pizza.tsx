@@ -4,9 +4,6 @@ const Pizza = (props) => {
   // Receives props from parent component App.jsx
   return (
     <div className="pizza">
-      {() => {
-        console.log("hi");
-      }}
       <h1>{props.name}</h1>
       <p>{props.description}</p>
       <img src={props.image} alt={props.name} />

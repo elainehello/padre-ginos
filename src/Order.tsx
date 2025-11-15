@@ -32,7 +32,9 @@ interface OrderProps {
 export default function Order({ onOrderSubmit }: OrderProps) {
   const [pizzaType, setPizzaType] = useState<string>("pepperoni"); // ← Initial state
   const [pizzaSize, setPizzaSize] = useState<string>("M");
-  console.log(pizzaType, pizzaSize);
+  
+  // This will log every time state changes
+  console.log("Current selection:", pizzaType, pizzaSize);
 
   return (
     <div className="order">
@@ -42,7 +44,10 @@ export default function Order({ onOrderSubmit }: OrderProps) {
           <div>
             <label htmlFor="pizza-type">Pizza Type</label>
             <select
-              onChange={(e) => setPizzaType(e.target.value)} // ← Event handler
+              onChange={(e) => {
+                console.log("Pizza type changed to:", e.target.value);
+                setPizzaType(e.target.value);
+              }} // ← Event handler
               name="pizza-type"
               value={pizzaType} // ← Display current state
             >
@@ -64,7 +69,10 @@ export default function Order({ onOrderSubmit }: OrderProps) {
                   name="pizza-size"
                   value="S"
                   id="pizza-s"
-                  onChange={(e) => setPizzaSize(e.target.value)}
+                  onChange={(e) => {
+                    console.log("Pizza size changed to:", e.target.value);
+                    setPizzaSize(e.target.value);
+                  }}
                 />
                 <label htmlFor="pizza-s">Small</label>
               </span>
@@ -75,7 +83,10 @@ export default function Order({ onOrderSubmit }: OrderProps) {
                   name="pizza-size"
                   value="M"
                   id="pizza-m"
-                  onChange={(e) => setPizzaSize(e.target.value)}
+                  onChange={(e) => {
+                    console.log("Pizza size changed to:", e.target.value);
+                    setPizzaSize(e.target.value);
+                  }}
                 />
                 <label htmlFor="pizza-m">Medium</label>
               </span>
@@ -86,7 +97,10 @@ export default function Order({ onOrderSubmit }: OrderProps) {
                   name="pizza-L"
                   value="L"
                   id="pizza-l"
-                  onChange={(e) => setPizzaSize(e.target.value)}
+                  onChange={(e) => {
+                    console.log("Pizza size changed to:", e.target.value);
+                    setPizzaSize(e.target.value);
+                  }}
                 />
                 <label htmlFor="pizza-l">Large</label>
               </span>
